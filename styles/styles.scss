@@ -1,0 +1,25 @@
+body{
+    height: 100%;
+    display: grid;
+    margin: 0 auto;
+    padding: 0 auto;
+    overflow: hidden;
+    background: #383862;    
+}
+@media screen and (max-width: 440px){
+    body{
+        overflow-x: hidden;
+        overflow-y: scroll;
+
+
+    }
+}
+.grid{
+    display: flex;
+    flex-direction: column;
+
+}
+
+@import 'snow';
+@import 'form';
+@import 'present';

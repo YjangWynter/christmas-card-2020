@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christmas Card</title>
+    <link rel="stylesheet" href="./styles/normalize.css">
+    <link rel="stylesheet" href="./styles/styles.css">
+</head>
+
+<body>
+    <!---
+The initial portion of the page must have a background of falling snow
+with palm trees in the background for the user.
+
+The project will require the user to login into the page 
+using their first name, which is sent to a script that will 
+authenticate whether their name matches the listed recipients
+with a file called `name_check.js`
+
+Once it passes, it will then scroll the screen to the next portion of the page
+with a present. Once the user taps the present box, it will
+open the lid and display a photo of the authenticated user with the text
+"Merry Christmans"
+
+-->
+    <!-- Login form -->
+    <div class="grid" id="view">
+        <div class="login "id="login">
+            <form id="name_check">
+                <h2>Your Christmas Card</h2>
+                <p class="prompt">Please enter your first name</p><br>
+                <input placeholder="Yjang" type="text" name="user_name" id="user_name">
+                <p id="error_text"></p>
+                <button id="name_submit" type="submit">Submit</button>
+            </form>
+        </div>
+
+
+
+    <!--Present Screen-->
+    <div class="invisible present" id="present">
+        <div class="gift-box">
+            <div class="lid">
+                <span></span>
+            </div>
+            <div class="picture">
+                <img id="image"src="https://images.theconversation.com/files/350865/original/file-20200803-24-50u91u.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=1200.0&fit=crop"
+                    alt="My special people's photos" >
+               
+            </div>
+            <div class="box">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <h2 id="greeting">Merry Christmas </h2>
+        <br>
+        <h3>Tap or Hover to Open</h3>
+
+    </div>
+
+    <!--Background-->
+    <div class="bg-snow">
+        <div class="snow layer1 a"></div>
+        <div class="snow layer1"></div>
+        <div class="snow layer2 a"></div>
+        <div class="snow layer2"></div>
+        <div class="snow layer3 a"></div>
+        <div class="snow layer3"></div>
+    </div>
+    </div>
+    </div>
+
+
+    <script src="./js/snow.js"></script>
+    <script src="./js/name_check.js"></script>
+</body>
+
+</html>

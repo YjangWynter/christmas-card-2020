@@ -1,0 +1,139 @@
+.invisible {
+    display: none;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+.present {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    display: flex;
+
+    h2, h3 {
+        margin: auto;
+        position: absolute;
+        z-index: 3;
+        color: #383862; 
+        font-size: 3rem;
+    }
+    h3{
+        font-size: 1rem;
+        margin-top: 60px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .present h2 {
+        font-size: 1.5rem;
+    }
+}
+
+.gift-box {
+    width: 45vw;
+    z-index: 2;
+
+
+}
+
+.picture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    height: 0;
+    position: relative;
+    z-index: 0;
+
+    img {
+        width: 50%;
+
+
+    }
+
+}
+
+.box,
+.lid {
+    background: repeating-linear-gradient(45deg,
+            #1b582a,
+            #0f852c 25px,
+            #7a1616 30px,
+            #7a1616 50px);
+    position: relative;
+    margin: 0 auto;
+}
+
+.box {
+    width: 44vw;
+    height: 36vh;
+}
+
+.box span,
+.lid span {
+    position: absolute;
+    display: block;
+    background: rgba($color: #e7b309, $alpha: 0.8);
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.1);
+}
+
+.box span:first-child {
+    width: 100%;
+    height: 37%;
+    top: 60px;
+}
+
+.box span:last-child,
+.lid span {
+    width: 25%;
+    height: 100%;
+    left: 37%;
+}
+
+.lid {
+    width: 44vw;
+    height: 7vh;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
+    z-index: 3;
+    padding: 0 2px;
+}
+
+.gift-box:hover .lid {
+    top: -300px;
+    transform: rotateZ(10deg);
+    left: 10px;
+}
+
+@media screen and (max-width: 400px) {
+    .box {
+        width: 50vw;
+        height: 20vh;
+    }
+
+    .lid {
+        width: 49vw;
+    }
+
+    .present h2 {
+        font-size: 1rem;
+    }
+
+    .gift-box:hover .lid {
+        top: -150px;
+    }
+}
+
+.gift-box:hover .picture {
+    top: -80px;
+    transition: all ease-out 1s;
+
+    img {
+        transition: all ease-out 1s;
+
+        visibility: visible;
+    }
+}
